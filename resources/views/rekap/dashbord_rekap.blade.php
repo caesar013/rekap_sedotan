@@ -192,7 +192,7 @@
                     <tbody>
                         @foreach ($resultsPerMonth as $month => $total)
                         <tr>
-                            <td><a href="{{ route('monthly', $month) }}">{{ $month }}</a></td>
+                            <td>{{ $month }}</td>
                             <td> @money($total) </td>
                         </tr>
                         @endforeach

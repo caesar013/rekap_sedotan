@@ -15,8 +15,8 @@ class RekapController extends Controller
 
     public function __construct()
     {
-        $this->threshold = 2024;
         $this->currentYear = date('Y');
+        $this->threshold = 2024;
     }
 
     protected function hitungRekap($countByWhat)
@@ -234,5 +234,19 @@ class RekapController extends Controller
             'totalRevenue' => $totalRevenue,
             'totalSales' => $totalSales,
         ]);
+    }
+
+    public function indexPerBulan()
+    {
+        $totalMonthly = $this->totalPerMonth();
+
+        return view('rekap.monthly', compact('totalMonthly'));
+    }
+
+    public function indexPerTahun()
+    {
+        $totalYearly = $this->totalPerYear();
+
+        return view('rekap.annually', compact('totalYearly'));
     }
 }

@@ -14,7 +14,8 @@
                     <h3>Invoice: {{ $invoices[$key]->nomor_invoice }}</h3>
                 </div>
                 <div class="card-body">
-
+                    <h6>Pemesan: {{ $invoices[$key]->pemesan->nama_pemesan }} </h6>
+                    <h6>Tanggal: {{ $invoices[$key]->tanggal }} </h6>
                     <table class="table table-striped mb-0">
                         <thead>
                             <tr>
@@ -38,7 +39,7 @@
                             </td>
                             @endforeach
                             <tr>
-                                <td colspan="3" align="right">
+                                <td colspan="4" align="right">
                                     <h5>Total : @money($totalHarga[$key]) </h5>
                                 </td>
                             </tr>
