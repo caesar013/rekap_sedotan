@@ -70,7 +70,7 @@
                             </span>
                             {{ number_format($percentageChange, 2) }}%
                         </div>
-                        <div class="detail-value">Rp {{ $month }}</div>
+                        <div class="detail-value"> @money($month) </div>
                         <div class="detail-name">This Month</div>
                     </div>
                     <div class="statistic-details-item">
@@ -85,7 +85,7 @@
                             </span>
                             {{ number_format($percentageChange, 2) }}%
                         </div>
-                        <div class="detail-value">Rp {{ $year }}</div>
+                        <div class="detail-value"> @money($year) </div>
                         <div class="detail-name">This Year</div>
                     </div>
                 </div>
@@ -143,7 +143,7 @@
                             <h4>Balance</h4>
                         </div>
                         <div class="card-body">
-                            Rp. {{ $totalRevenue }}
+                            @money($totalRevenue)
                         </div>
                     </div>
                 </div>

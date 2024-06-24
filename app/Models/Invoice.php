@@ -9,13 +9,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Invoice extends Model
 {
     use HasFactory, SoftDeletes;
-    protected $table="invoice";
-    protected $guarded=[];
-
-    public function metode_pembayaran()
-    {
-        return $this->belongsTo(MetodePembayaran::class, 'FK_metode_pembayaran', 'id');
-    }
+    protected $table = "invoice";
+    protected $guarded = [];
 
     public function bank()
     {

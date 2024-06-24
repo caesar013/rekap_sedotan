@@ -38,7 +38,7 @@
                                         <tr>
                                             <td>{{ $i->nomor_invoice }}</td>
                                             <td>{{ $i->tanggal}}</td>
-                                            <td>{{ $i->metode_pembayaran->nama_metode }}</td>
+                                            <td>{{ $i->is_cash ? 'Cash' : 'Transfer' }}</td>
                                             <td>{{ $i->bank->nama_bank }}</td>
                                             <td>{{ $i->pegawai->name }}</td>
                                             <td>{{ $i->pemesan->nama_pemesan }}</td>
